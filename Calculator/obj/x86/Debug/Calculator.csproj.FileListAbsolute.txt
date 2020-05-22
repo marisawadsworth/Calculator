@@ -41,3 +41,4 @@ C:\Users\10002444\source\repos\Calculator\Calculator\obj\x86\Debug\qualifiers.tx
 C:\Users\10002444\source\repos\Calculator\Calculator\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\10002444\source\repos\Calculator\Calculator\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\10002444\source\repos\Calculator\Calculator\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636884842160000000.json
+C:\Users\10002444\source\repos\Calculator\Calculator\obj\x86\Debug\Calculator.csprojAssemblyReference.cache

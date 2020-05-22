@@ -159,7 +159,15 @@ namespace Calculator
         private void Backspace(object sender, RoutedEventArgs e)
         {
             //Backspaces a number
+            if (TextDisplay.Text.Length > 0)
+            {
+                TextDisplay.Text = TextDisplay.Text.Remove(TextDisplay.Text.Length - 1, 1);
+            }
 
+            if (TextDisplay.Text == "")
+            {
+                TextDisplay.Text = "0";
+            }
         }
     }
 }
