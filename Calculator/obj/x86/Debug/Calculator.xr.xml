@@ -38,8 +38,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextAlignment" />
-      <RootProperty Name="FontWeight" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontWeight" />
       <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">

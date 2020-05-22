@@ -92,6 +92,7 @@ namespace Calculator
             operation = b.Content.ToString();
             result = Double.Parse(TextDisplay.Text);
             TextDisplay.Text = "";
+            ShowOps.Text = System.Convert.ToString(result) + " " + operation;
         }
     }
 }
