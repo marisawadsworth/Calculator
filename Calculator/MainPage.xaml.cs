@@ -89,10 +89,71 @@ namespace Calculator
         private void operatorsOnly(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
-            operation = b.Content.ToString();
+
+            // Gets the equation and equals it together.
+            // NOT WORKING ///////////////////////////////////////
+            if (result != 0)
+            {
+                //btnEquals.Loaded();
+                //.PerformClick
+                enter_value = true;
+                operation = b.Content.ToString();
+            }
+            else
+            {
+                operation = b.Content.ToString();
+                result = Double.Parse(TextDisplay.Text);
+                TextDisplay.Text = "";
+                ShowOps.Text = System.Convert.ToString(result) + " " + operation;
+            }
+        }
+
+        private void btnEquals_Click(object sender, RoutedEventArgs e)
+        {
+            // Shows the text above and coverts the numbers and symbols to a string.
+            ShowOps.Text = "";
+            switch(operation)
+            {
+                case "+":
+                    TextDisplay.Text = (result + Double.Parse(TextDisplay.Text)).ToString();
+                    break;
+                case "-":
+                    TextDisplay.Text = (result + Double.Parse(TextDisplay.Text)).ToString();
+                    break;
+                case "*":
+                    TextDisplay.Text = (result + Double.Parse(TextDisplay.Text)).ToString();
+                    break;
+                case "/":
+                    TextDisplay.Text = (result + Double.Parse(TextDisplay.Text)).ToString();
+                    break;
+
+                default:
+                    break;
+            }
             result = Double.Parse(TextDisplay.Text);
-            TextDisplay.Text = "";
-            ShowOps.Text = System.Convert.ToString(result) + " " + operation;
+            operation = "";
+        }
+
+        /// <summary>
+        /// Restart the calculator
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Restart(object sender, RoutedEventArgs e)
+        {
+            // Sets the number back to 0.
+            TextDisplay.Text = "0";
+        }
+
+        /// <summary>
+        /// Backspace a number
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Backspace(object sender, RoutedEventArgs e)
+        {
+            //Backspaces a number
+
         }
     }
 }

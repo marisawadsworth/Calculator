@@ -59,11 +59,11 @@
                 VerticalAlignment="Top" Width="90" 
                 Height="67" FontSize="20"
                 Background="#FFD8D6D6" Margin="250,171,0,0" 
-                Grid.Row="1"/>
+                Grid.Row="1" Click="Restart"/>
         <Button Content="⌫" 
                 Margin="348,171,0,0" VerticalAlignment="Top" 
                 Width="90" Height="67" FontSize="20" 
-                Background="#FFD8D6D6" Grid.Row="1"/>
+                Background="#FFD8D6D6" Grid.Row="1" Click="Backspace"/>
         <Button Content="%" VerticalAlignment="Top" 
                 Width="90" Height="67" FontSize="20" 
                 Background="#FFEAE6E6" Margin="443,171,0,0" 
@@ -128,10 +128,10 @@
                 VerticalAlignment="Top" Width="90" 
                 Height="67" FontSize="20" 
                 Background="#FFEAE6E6" Grid.Row="1"/>
-        <Button Content="=" Margin="538,459,0,0" 
+        <Button x:Name="btnEquals" Content="=" Margin="538,459,0,0" 
                 VerticalAlignment="Top" Width="90" 
                 Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"/>
+                Background="#FFEAE6E6" Grid.Row="1" Click="btnEquals_Click"/>
 
         <RichTextBlock HorizontalAlignment="Left" Height="353" Margin="648,171,0,0" Grid.Row="1" VerticalAlignment="Top" Width="197">
             <Paragraph>
