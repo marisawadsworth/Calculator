@@ -22,7 +22,7 @@ namespace Calculator
         Double result = 0;
         String operation = "";
         bool enter_value = false;
-        char iOperation;
+        String firstNum, secondNum;
 
         public MainPage()
         {
@@ -40,10 +40,10 @@ namespace Calculator
 
         private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (HeartListboxItem.IsSelected)
+            if (CalculatorListboxItem.IsSelected)
             { ResultTextBlock.Text = "Heart"; }
 
-            else if (StarListboxItem.IsSelected)
+            else if (HistoryListboxItem.IsSelected)
             { ResultTextBlock.Text = "Star"; }
         }
 
@@ -106,8 +106,15 @@ namespace Calculator
                 TextDisplay.Text = "";
                 ShowOps.Text = System.Convert.ToString(result) + " " + operation;
             }
+
+            firstNum = ShowOps.Text;
         }
 
+        /// <summary>
+        /// Shows numbers in textbox above
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
             // Shows the text above and coverts the numbers and symbols to a string.
@@ -130,8 +137,6 @@ namespace Calculator
                 default:
                     break;
             }
-            result = Double.Parse(TextDisplay.Text);
-            operation = "";
         }
 
         /// <summary>
@@ -143,6 +148,7 @@ namespace Calculator
         {
             // Sets the number back to 0.
             TextDisplay.Text = "0";
+            result = 0;
         }
 
         /// <summary>
