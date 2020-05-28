@@ -10,5 +10,23 @@
 
     <Grid>
 
+        <TextBlock x:Name="Speak_Block" 
+                   FontSize="20"
+                   Margin="246,118,0,0"
+                   Text="Welcome" />
+
+        <Button Content="Speak" 
+                Grid.Column="0" 
+                Click="Button_Click_Speak"
+                Background="#FFEAE6E6" 
+                BorderBrush="#FFA3EAF5"
+                Foreground="Black"
+                Margin="246,385,0,0" 
+                VerticalAlignment="Top">
+        </Button>
+
+
+        <MediaElement Name="media"  Visibility="Collapsed"/>
+
     </Grid>
 </Page>
