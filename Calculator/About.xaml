@@ -11,19 +11,21 @@
     <Grid>
 
         <TextBlock x:Name="Speak_Block" 
-                   FontSize="20"
+                   FontSize="26"
                    Margin="246,118,0,0"
-                   Text="Welcome" />
+                   Text="Welcome to the Calculator Application.
+                   &#x0a;Made by Marisa Wadsworth.
+                   &#x0a;&#x0a;This Calculator can be used for Maths with addition, subtraction, &#x0a;division, and multiplication.
+                   &#x0a;&#x0a;Use CE to clear."/>
 
-        <Button Content="Speak" 
-                Grid.Column="0" 
+        <Button Content="Speak"  
                 Click="Button_Click_Speak"
                 Background="#FFEAE6E6" 
                 BorderBrush="#FFA3EAF5"
                 Foreground="Black"
-                Margin="246,385,0,0" 
-                VerticalAlignment="Top">
-        </Button>
+                Margin="246,0,0,0" 
+                Height="83" Width="124"
+                FontSize="20"/>
 
 
         <MediaElement Name="media"  Visibility="Collapsed"/>
