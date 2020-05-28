@@ -14,131 +14,60 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <RelativePanel>
+        <RelativePanel Grid.Row="0">
             <Button Name="HamburgerButton" 
-                    FontFamily="Segoe MDL2 Assets" 
-                    Content="&#xE700;" FontSize="36" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets"
+                    FontSize="36" 
+                    Content="&#xE700;" 
                     Click="HamburgerButton_Click" />
-            <TextBox Text="Calculator" FontSize="24" 
-                     Width="195" Margin="60,0,0,0"  
-                     Height="50" FontWeight="Bold" 
-                     BorderBrush="#66FFFFFF"/>
+
+            <Button Name="BackButton"
+                    RelativePanel.RightOf="HamburgerButton" 
+                    FontFamily="Segoe MDl2 Assets" 
+                    FontSize="36"
+                    Content="&#xE0C4;" 
+                    Click="BackButton_Click" />
+
+            <TextBlock Name="TitleTextBlock"
+                       RelativePanel.RightOf="BackButton"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Margin="20,5,0,0"/>
         </RelativePanel>
-        <SplitView Name="MySplitView" Grid.Row="1" 
+
+        <SplitView Grid.Row="1" 
+                   Name="MySplitView"
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="200" 
-                   CompactPaneLength="56" 
-                   HorizontalAlignment="Left">
+                   CompactPaneLength="56">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" 
-                         Name="IconsListBox">
-                    
-                    <ListBoxItem Name="CalculatorListboxItem">
+                         SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="Calculator">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1D0;" FontSize="36" />
-                            <TextBlock Text="Calculator" FontSize="24" Margin="20,0,0,0"/>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1D0;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Calculator</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-
-                    <ListBoxItem Name="HistoryListboxItem">
+                    <ListBoxItem Name="About">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE0B4;" FontSize="36" />
-                            <TextBlock Text="History" FontSize="24" Margin="20,0,0,0"/>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">About</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Share">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xF003;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Share</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
             </SplitView.Pane>
-
             <SplitView.Content>
-                <TextBlock Name ="ResultTextBlock" />
+                <Frame Name="MyFrame"></Frame>
             </SplitView.Content>
+
         </SplitView>
-
-        <TextBox x:Name="TextDisplay" HorizontalAlignment="Left" Height="59" Margin="250,107,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="378" FontSize="40" TextAlignment="Right" Grid.Row="1" TextChanged="TextDisplay_TextChanged"/>
-
-        <Button Content="CE" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20"
-                Background="#FFD8D6D6" Margin="250,171,0,0" 
-                Grid.Row="1" Click="Restart"/>
-        <Button Content="⌫" 
-                Margin="348,171,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFD8D6D6" Grid.Row="1" Click="Backspace"/>
-        <Button Content="%" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Margin="443,171,0,0" 
-                Grid.Row="1"/>
-        <Button Content="÷" 
-                Margin="538,171,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="26" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="operatorsOnly"/>
-        <Button Content="7" Margin="250,243,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="8" 
-                Margin="348,243,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="9" Margin="443,243,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="X" Margin="538,243,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="operatorsOnly"/>
-        <Button Content="4" Margin="250,315,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="5" Margin="348,315,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="6" Margin="443,315,0,0" 
-                VerticalAlignment="Top" Width="90"
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="-" Margin="538,315,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="operatorsOnly"/>
-        <Button Content="1" Margin="250,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="2" Margin="348,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="3" Margin="443,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="+" Margin="538,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="operatorsOnly"/>
-        <Button Content="0" Margin="250,459,0,0" 
-                VerticalAlignment="Top" Width="185" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="numbersOnly"/>
-        <Button Content="." Margin="443,459,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"/>
-        <Button x:Name="btnEquals" Content="=" Margin="538,459,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1" Click="btnEquals_Click"/>
-        <TextBox x:Name="ShowOps" HorizontalAlignment="Left" 
-                 Margin="250,70,0,0" Grid.Row="1" 
-                 Text="" VerticalAlignment="Top" 
-                 TextAlignment="Right" Width="378" 
-                 BorderBrush="#66FFFFFF"/>
-
-
     </Grid>
 </Page>

@@ -14,132 +14,61 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <RelativePanel>
-            <Button x:ConnectionId='26' Name="HamburgerButton" 
-                    FontFamily="Segoe MDL2 Assets" 
-                    Content="&#xE700;" FontSize="36" 
+        <RelativePanel Grid.Row="0">
+            <Button x:ConnectionId='8' Name="HamburgerButton" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets"
+                    FontSize="36" 
+                    Content="&#xE700;" 
                                                   />
-            <TextBox Text="Calculator" FontSize="24" 
-                     Width="195" Margin="60,0,0,0"  
-                     Height="50" FontWeight="Bold" 
-                     BorderBrush="#66FFFFFF"/>
+
+            <Button x:ConnectionId='9' Name="BackButton"
+                    RelativePanel.RightOf="HamburgerButton" 
+                    FontFamily="Segoe MDl2 Assets" 
+                    FontSize="36"
+                    Content="&#xE0C4;" 
+                                             />
+
+            <TextBlock x:ConnectionId='10' Name="TitleTextBlock"
+                       RelativePanel.RightOf="BackButton"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Margin="20,5,0,0"/>
         </RelativePanel>
-        <SplitView x:ConnectionId='2' Name="MySplitView" Grid.Row="1" 
+
+        <SplitView x:ConnectionId='2' Grid.Row="1" 
+                   Name="MySplitView"
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="200" 
-                   CompactPaneLength="56" 
-                   HorizontalAlignment="Left">
+                   CompactPaneLength="56">
             <SplitView.Pane>
-                <ListBox x:ConnectionId='22' SelectionMode="Single" 
-                         Name="IconsListBox">
-                    
-                    <ListBoxItem x:ConnectionId='23' Name="CalculatorListboxItem">
+                <ListBox x:ConnectionId='3' SelectionMode="Single" 
+                                                                    >
+                    <ListBoxItem x:ConnectionId='4' Name="Calculator">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1D0;" FontSize="36" />
-                            <TextBlock Text="Calculator" FontSize="24" Margin="20,0,0,0"/>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1D0;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Calculator</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-
-                    <ListBoxItem x:ConnectionId='24' Name="HistoryListboxItem">
+                    <ListBoxItem x:ConnectionId='5' Name="About">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE0B4;" FontSize="36" />
-                            <TextBlock Text="History" FontSize="24" Margin="20,0,0,0"/>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE1CE;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">About</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='6' Name="Share">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xF003;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Share</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
             </SplitView.Pane>
-
             <SplitView.Content>
-                <TextBlock x:ConnectionId='25' Name ="ResultTextBlock" />
+                <Frame x:ConnectionId='7' Name="MyFrame"></Frame>
             </SplitView.Content>
+
         </SplitView>
-
-        <TextBox x:ConnectionId='3' x:Name="TextDisplay" HorizontalAlignment="Left" Height="59" Margin="250,107,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="378" FontSize="40" TextAlignment="Right" Grid.Row="1"                                      />
-
-        <Button x:ConnectionId='4' Content="CE" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20"
-                Background="#FFD8D6D6" Margin="250,171,0,0" 
-                Grid.Row="1"                />
-        <Button x:ConnectionId='5' Content="⌫" 
-                Margin="348,171,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFD8D6D6" Grid.Row="1"                  />
-        <Button Content="%" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Margin="443,171,0,0" 
-                Grid.Row="1"/>
-        <Button x:ConnectionId='6' Content="÷" 
-                Margin="538,171,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="26" 
-                Background="#FFEAE6E6" Grid.Row="1"                      />
-        <Button x:ConnectionId='7' Content="7" Margin="250,243,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='8' Content="8" 
-                Margin="348,243,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='9' Content="9" Margin="443,243,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='10' Content="X" Margin="538,243,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                      />
-        <Button x:ConnectionId='11' Content="4" Margin="250,315,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='12' Content="5" Margin="348,315,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='13' Content="6" Margin="443,315,0,0" 
-                VerticalAlignment="Top" Width="90"
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='14' Content="-" Margin="538,315,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                      />
-        <Button x:ConnectionId='15' Content="1" Margin="250,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='16' Content="2" Margin="348,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='17' Content="3" Margin="443,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button x:ConnectionId='18' Content="+" Margin="538,387,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                      />
-        <Button x:ConnectionId='19' Content="0" Margin="250,459,0,0" 
-                VerticalAlignment="Top" Width="185" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                    />
-        <Button Content="." Margin="443,459,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"/>
-        <Button x:ConnectionId='20' x:Name="btnEquals" Content="=" Margin="538,459,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" Grid.Row="1"                        />
-        <TextBox x:ConnectionId='21' x:Name="ShowOps" HorizontalAlignment="Left" 
-                 Margin="250,70,0,0" Grid.Row="1" 
-                 Text="" VerticalAlignment="Top" 
-                 TextAlignment="Right" Width="378" 
-                 BorderBrush="#66FFFFFF"/>
-
-
     </Grid>
 </Page>
 
