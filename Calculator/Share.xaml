@@ -18,8 +18,9 @@
             <Setter Property="Width" Value="310" />
             <Setter Property="VerticalAlignment" Value="Top" />
             <Setter Property="FontSize" Value="32" />
-            <Setter Property="Background" Value="#FFF7912B" />
-            <Setter Property="BorderBrush" Value="#FFE89363" />
+            <Setter Property="Background" Value="#FFEAE6E6" />
+            <Setter Property="BorderBrush" Value="#FFA3EAF5" />
+            <Setter Property="CornerRadius" Value="10" />
         </Style>
         <Style TargetType="TextBlock" x:Key="MyTextBlock" >
             <Setter Property="HorizontalAlignment" Value="Left" />
