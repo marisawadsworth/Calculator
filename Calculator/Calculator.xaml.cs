@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -125,6 +126,7 @@ namespace Calculator
         {
             AddNumberToResult(9);
         }
+
         #endregion Numbers
 
         #region Operation
@@ -155,9 +157,18 @@ namespace Calculator
         /// 
 
         #region Clear 
+
+
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            result.Text = 0.ToString();
+            try
+            {
+                result.Text = 0.ToString();
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The Clear button is not working." + exc.Message);
+            }
         }
         #endregion Clear
 
