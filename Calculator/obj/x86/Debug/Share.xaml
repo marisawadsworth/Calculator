@@ -9,7 +9,38 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Image Source="Assets/fb.jpg" 
+               VerticalAlignment="Top" Margin="399,161,943,0" Height="124" />
+        <Image Source="Assets/instagram.jpg" 
+               VerticalAlignment="Top" Margin="614,161,733,0" Height="124" />
+        <Image Source="Assets/twitter.jpg" 
+               VerticalAlignment="Top" Margin="398,350,944,0" Height="124" />
+        <Image Source="Assets/whatsapp.jpg" 
+               VerticalAlignment="Top" Margin="610,350,732,0" Height="124" />
+        <RadioButton Content="Facebook" 
+                     Margin="413,285,0,0"
+                     VerticalAlignment="Top"
+                     FontSize="18"/>
+        <RadioButton Content="Instagram" 
+                     Margin="633,285,0,0"
+                     VerticalAlignment="Top"
+                     FontSize="18"/>
+        <RadioButton Content="Twitter" 
+                     Margin="413,478,0,0"
+                     FontSize="18" VerticalAlignment="Top"/>
+        <RadioButton Content="Whats App" 
+                     Margin="630,478,0,0"
+                     FontSize="18" VerticalAlignment="Top"/>
+        <Button Content="Share" Margin="425,591,0,0" 
+                VerticalAlignment="Top" Height="68" 
+                Width="310" FontSize="32" 
+                Background="#FFF7912B" BorderBrush="#FFE89363"/>
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="254,77,0,0" 
+                   Text="Share This App On Your Social Media" 
+                   TextWrapping="Wrap" FontSize="40"
+                   VerticalAlignment="Top" 
+                   Height="69" Width="659"/>
     </Grid>
 </Page>
 

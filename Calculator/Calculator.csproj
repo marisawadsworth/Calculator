@@ -141,6 +141,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\fb.jpg" />
+    <Content Include="Assets\instagram.jpg" />
+    <Content Include="Assets\twitter.jpg" />
+    <Content Include="Assets\whatsapp.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

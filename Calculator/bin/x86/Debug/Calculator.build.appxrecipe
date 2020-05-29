@@ -34,6 +34,18 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\Assets\fb.jpg">
+      <PackagePath>Assets\fb.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\Assets\instagram.jpg">
+      <PackagePath>Assets\instagram.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\Assets\twitter.jpg">
+      <PackagePath>Assets\twitter.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\Assets\whatsapp.jpg">
+      <PackagePath>Assets\whatsapp.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

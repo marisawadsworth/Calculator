@@ -10,23 +10,28 @@
 
     <Grid>
 
-        <TextBlock x:Name="Speak_Block" 
-                   FontSize="26"
-                   Margin="246,118,0,0"
-                   Text="Welcome to the Calculator Application.
-                   &#x0a;Made by Marisa Wadsworth.
-                   &#x0a;&#x0a;This Calculator can be used for Maths with addition, subtraction, &#x0a;division, and multiplication.
-                   &#x0a;&#x0a;Use CE to clear."/>
+        <ScrollViewer 
+                  HorizontalScrollBarVisibility="Auto" 
+                  VerticalScrollBarVisibility="Auto" Margin="255,79,130,499">
+            <TextBlock Width="789" TextWrapping="Wrap"
+                       x:Name="Speak_Block" 
+                       FontSize="26"
+                       
+                       Text="Welcome to the Calculator Application.
+                       &#x0a;Made by Marisa Wadsworth.
+                       &#x0a;&#x0a;This Calculator can be used for Maths with addition, subtraction, &#x0a;division, and multiplication.
+                       &#x0a;&#x0a;Use CE to clear.
+                       &#x0a;&#x0a;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Height="765" />
+        </ScrollViewer>
 
         <Button Content="Speak"  
                 Click="Button_Click_Speak"
                 Background="#FFEAE6E6" 
                 BorderBrush="#FFA3EAF5"
                 Foreground="Black"
-                Margin="246,0,0,0" 
+                Margin="255,0,0,0" 
                 Height="83" Width="124"
                 FontSize="20"/>
-
 
         <MediaElement Name="media"  Visibility="Collapsed"/>
 
