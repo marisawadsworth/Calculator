@@ -8,88 +8,100 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="MyButtonStyle">
+            <Setter Property="Background" Value="#FFEAE6E6" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Height" Value="67" />
+            <Setter Property="Width" Value="90" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+        <Style TargetType="TextBox" x:Key="MyTextBoxStyle">
+            <Setter Property="Height" Value="60" />
+            <Setter Property="Width" Value="378" />
+            <Setter Property="FontFamily" Value="Arial Black" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="TextAlignment" Value="Right" />
+            <Setter Property="CornerRadius" Value="10" />
+        </Style>
+    </Page.Resources>
+    
     <Grid>
-        <TextBox x:Name="result" HorizontalAlignment="Left" Height="59" Margin="246,118,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="378" FontSize="40" TextAlignment="Right"/>
+
+        <TextBox x:Name="result"
+                 Margin="246,118,0,0" 
+                 Text="0" 
+                 Style="{StaticResource MyTextBoxStyle}" />
 
         <Button x:Name="btnClear" Content="CE" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20"
-                Background="#FFD8D6D6" Margin="246,398,0,0" 
-                Click="btnClear_Click"/>
+                Background="#FFD8D6D6" 
+                Margin="246,398,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btnClear_Click" />
         <Button x:Name="btnDivide" Content="÷" 
-                Margin="534,182,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="26" 
-                Background="#FFEAE6E6" 
-                Click="btnDivide_Click"/>
-        <Button x:Name="btn7" Content="7" Margin="246,182,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn7_Click"/>
+                Margin="534,182,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btnDivide_Click" />
+        <Button x:Name="btn7" Content="7" 
+                Margin="246,182,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn7_Click" />
         <Button x:Name="btn8" Content="8" 
-                Margin="344,182,0,0" VerticalAlignment="Top" 
-                Width="90" Height="67" FontSize="20" 
-                Background="#FFEAE6E6"
+                Margin="344,182,0,0"
+                Style="{StaticResource MyButtonStyle}"
                 Click="btn8_Click" />
-        <Button x:Name="btn9" Content="9" Margin="439,182,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6"
-                Click="btn9_Click"/>
-        <Button x:Name="btnTimes" Content="X" Margin="534,254,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btnTimes_Click"/>
-        <Button x:Name="btn4" Content="4" Margin="246,254,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn4_Click"/>
-        <Button x:Name="btn5" Content="5" Margin="344,254,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn5_Click"/>
-        <Button x:Name="btn6" Content="6" Margin="439,254,0,0" 
-                VerticalAlignment="Top" Width="90"
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn6_Click"/>
-        <Button x:Name="btnMinus" Content="-" Margin="534,326,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btnMinus_Click"/>
-        <Button x:Name="btn1" Content="1" Margin="246,326,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn1_Click"/>
-        <Button x:Name="btn2" Content="2" Margin="344,326,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn2_Click"/>
-        <Button x:Name="btn3" Content="3" Margin="439,326,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btn3_Click"/>
-        <Button x:Name="btnPlus" Content="+" Margin="534,398,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btnPlus_Click"/>
-        <Button x:Name="btn0" Content="0" Margin="344,397,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20"  
-                Background="#FFEAE6E6" 
-                Click="btn0_Click"/>
-        <Button x:Name="btnEquals" Content="=" Margin="439,397,0,0" 
-                VerticalAlignment="Top" Width="90" 
-                Height="67" FontSize="20" 
-                Background="#FFEAE6E6" 
-                Click="btnEquals_Click"/>
+        <Button x:Name="btn9" Content="9"
+                Margin="439,182,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn9_Click" />
+        <Button x:Name="btnTimes" Content="X" 
+                Margin="534,254,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btnTimes_Click" />
+        <Button x:Name="btn4" Content="4" 
+                Margin="246,254,0,0" 
+                Style="{StaticResource MyButtonStyle}" 
+                Click="btn4_Click" />
+        <Button x:Name="btn5" Content="5" 
+                Margin="344,254,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn5_Click" />
+        <Button x:Name="btn6" Content="6" 
+                Margin="439,254,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn6_Click" />
+        <Button x:Name="btnMinus" Content="-" 
+                Margin="534,326,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btnMinus_Click" />
+        <Button x:Name="btn1" Content="1" 
+                Margin="246,326,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn1_Click" />
+        <Button x:Name="btn2" Content="2" 
+                Margin="344,326,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn2_Click" />
+        <Button x:Name="btn3" Content="3" 
+                Margin="439,326,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn3_Click" />
+        <Button x:Name="btnPlus" Content="+" 
+                Margin="534,398,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btnPlus_Click" />
+        <Button x:Name="btn0" Content="0" 
+                Margin="344,397,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btn0_Click" />
+        <Button x:Name="btnEquals" Content="=" 
+                Margin="439,397,0,0" 
+                Style="{StaticResource MyButtonStyle}"
+                Click="btnEquals_Click" />
+   
     </Grid>
 </Page>
