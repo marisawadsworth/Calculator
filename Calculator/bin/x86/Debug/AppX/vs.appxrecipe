@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-05-29T03:39:11.034</Modified>
+      <Modified>2020-05-29T03:46:08.400</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2020-05-29T03:39:10.493</Modified>
+      <Modified>2020-05-29T03:46:08.062</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -102,27 +102,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
-      <Modified>2020-05-29T03:39:10.281</Modified>
+      <Modified>2020-05-29T03:45:38.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-05-29T03:39:10.305</Modified>
+      <Modified>2020-05-29T03:46:07.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\About.xbf">
       <PackagePath>About.xbf</PackagePath>
-      <Modified>2020-05-29T03:39:10.305</Modified>
+      <Modified>2020-05-29T03:46:07.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\Calculator.xbf">
       <PackagePath>Calculator.xbf</PackagePath>
-      <Modified>2020-05-29T03:39:10.305</Modified>
+      <Modified>2020-05-29T03:46:07.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-05-29T03:39:10.306</Modified>
+      <Modified>2020-05-29T03:46:07.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\Share.xbf">
       <PackagePath>Share.xbf</PackagePath>
-      <Modified>2020-05-29T03:39:10.306</Modified>
+      <Modified>2020-05-29T03:46:07.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10002444\source\repos\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2020-05-29T03:39:11.024</Modified>
+      <Modified>2020-05-29T03:46:08.398</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

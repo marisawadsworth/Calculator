@@ -8,6 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="MyButtonStyle">
+            <Setter Property="Background" Value="#FFEAE6E6" />
+            <Setter Property="BorderBrush" Value="#FFA3EAF5" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Height" Value="85" />
+            <Setter Property="Width" Value="125" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+    </Page.Resources>
+    
     <Grid>
 
         <ScrollViewer 
@@ -26,12 +38,8 @@
 
         <Button Content="Speak"  
                 Click="Button_Click_Speak"
-                Background="#FFEAE6E6" 
-                BorderBrush="#FFA3EAF5"
-                Foreground="Black"
-                Margin="255,0,0,0" 
-                Height="83" Width="124"
-                FontSize="20"/>
+                
+                Style="{StaticResource MyButtonStyle}" Margin="255,357,0,0" />
 
         <MediaElement Name="media"  Visibility="Collapsed"/>
 
