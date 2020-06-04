@@ -37,23 +37,23 @@
     </Page.Resources>
 
     <Grid>
-        <Image x:Name="imgSocial1" 
-               Source="Assets/fb.jpg" 
-               Margin="399,161,943,0" 
-               Style="{StaticResource MyImage}" />
+        <Image x:Name="imgSocial01" 
+                Source="/Assets/fb.jpg" 
+                Style="{StaticResource MyImage}" Margin="-99,161,99,0"/>
         <Image x:Name="imgSocial2" 
-               Source="Assets/instagram.jpg" 
-               Margin="614,161,733,0"
-               Style="{StaticResource MyImage}" />
+               Source="/Assets/instagram.jpg" 
+               Style="{StaticResource MyImage}" Margin="124,161,-124,0" />
         <Image x:Name="imgSocial3" 
-               Source="Assets/twitter.jpg" 
-               Margin="398,350,944,0"
-               Style="{StaticResource MyImage}" />
+               Source="/Assets/twitter.jpg" 
+
+               Style="{StaticResource MyImage}" Margin="-98,349,98,0" />
         <Image x:Name="imgSocial4" 
-               Source="Assets/whatsapp.jpg" 
-               Margin="610,350,732,0"
-               Style="{StaticResource MyImage}" />
-        
+               Source="/Assets/whatsapp.jpg" 
+
+               Style="{StaticResource MyImage}" Margin="122,349,-122,0" />
+
+
+
         <RadioButton x:Name="btnSocial1" 
                      Content="Facebook" 
                      Margin="413,285,0,0"

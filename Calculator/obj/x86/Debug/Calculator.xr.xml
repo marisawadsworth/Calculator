@@ -116,8 +116,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Calculator.Share" />
   </Roots.RootTypes>

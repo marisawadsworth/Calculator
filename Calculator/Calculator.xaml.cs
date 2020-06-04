@@ -88,15 +88,36 @@ namespace Calculator
         #region Numbers
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
-            AddNumberToResult(0);
+            try
+            {
+                AddNumberToResult(0);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The 0 button is not working." + exc.Message);
+            }
         }
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            AddNumberToResult(1);
+            try
+            {
+                AddNumberToResult(1);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The 1 button is not working." + exc.Message);
+            }
         }
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            AddNumberToResult(2);
+            try
+            {
+                AddNumberToResult(2);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The 2 button is not working." + exc.Message);
+            }
         }
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
@@ -132,7 +153,14 @@ namespace Calculator
         #region Operation
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
-            AddOperationToResult(Operation.PLUS);
+            try
+            {
+                AddOperationToResult(Operation.PLUS);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The Plus button is not working." + exc.Message);
+            }
         }
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
