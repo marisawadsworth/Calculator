@@ -164,15 +164,36 @@ namespace Calculator
         }
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
-            AddOperationToResult(Operation.MINUS);
+            try
+            {
+                AddOperationToResult(Operation.MINUS);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The Minus button is not working." + exc.Message);
+            }
         }
         private void btnTimes_Click(object sender, RoutedEventArgs e)
         {
-            AddOperationToResult(Operation.TIMES);
+            try
+            {
+                AddOperationToResult(Operation.TIMES);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The Times button is not working." + exc.Message);
+            }
         }
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            AddOperationToResult(Operation.DIVIDE);
+            try
+            {
+                AddOperationToResult(Operation.DIVIDE);
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine("The Divide button is not working." + exc.Message);
+            }
         }
         #endregion Operation
 
